@@ -1,0 +1,7 @@
+---
+vim::config_file_template: "vim/%{::lsbdistcodename}/etc/vim/vimrc.erb"
+vim::config_file_hash:
+  'vimrc.local':
+    config_file_path:     '/etc/vim/vimrc.local'
+    config_file_source:   'puppet:///modules/vim/common/etc/vim/vimrc.local'
+vim::background: 'light'

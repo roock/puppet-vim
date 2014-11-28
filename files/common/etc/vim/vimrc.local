@@ -1,0 +1,20 @@
+"
+" THIS FILE IS MANAGED BY PUPPET
+" /etc/puppet/environments/production/modules/vim/files/common/etc/vim/vimrc.local
+"
+
+nmap <f2>      :set invlist!<cr>:set invlist?<cr>
+imap <f2> <c-o>:set invlist<cr>:set invlist?<cr>
+nmap <f3>      :set number!<cr>:set number?<cr>
+imap <f3> <c-o>:set number<cr>:set number?<cr>
+nmap <f4>      :set paste!<cr>:set paste?<cr>
+imap <f4> <c-0>:set paste<cr>:set paste?<cr>
+
+set cursorline
+set hlsearch
+set list
+set listchars=tab:\·\  
+set modeline
+set noautoindent
+set number
+set textwidth=78
