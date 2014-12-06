@@ -14,6 +14,13 @@ class vim::config {
   }
 
   if $::vim::config_file_path {
+    exec { 'update-alternatives':
+      path    => '/usr/bin:/usr/sbin/:/bin:/sbin',
+      command => 'update-alternatives --set editor /usr/bin/vim.basic',
+      unless  => 'test /etc/alternatives/editor -ef /usr/bin/vim.basic',
+      require => $::vim::config_file_require,
+    }
+
     file { 'vim.conf':
       ensure  => $::vim::config_file_ensure,
       path    => $::vim::config_file_path,
