@@ -253,6 +253,11 @@ Determines which parameters should be passed to an ERB template. Defaults to '{}
 
 Determines which color scheme for syntax highlighting should be used. Valid values are 'dark' and 'light'. Defaults to 'dark'.
 
+#### `default_editor`
+
+Determines if vim should be used as default editor. Valid values are 'true'
+and 'false'. Defaults to 'true'.
+
 ## Limitations
 
 This module has been tested on:

@@ -24,6 +24,7 @@ class vim (
   $config_file_options_hash = {},
 
   $background               = 'dark',
+  $default_editor           = true,
 ) inherits ::vim::params {
   validate_re($package_ensure, '^(absent|latest|present|purged)$')
   validate_string($package_name)
