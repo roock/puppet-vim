@@ -1,3 +1,7 @@
+## 2015-01-19 Release 1.1.0
+### Summary:
+- [Puppet] Add parameter 'default_editor' to trigger execution of update-alternatives
+
 ## 2014-12-06 Release 1.0.1
 ### Summary:
 - [Puppet] Set Vim as default editor
