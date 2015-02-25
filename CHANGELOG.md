@@ -1,3 +1,8 @@
+## 2015-02-25 Release 1.1.2
+### Summary:
+- [Beaker] Update Beaker environment
+- [Travis CI] Update Travis CI environment
+
 ## 2015-02-25 Release 1.1.1
 ### Summary:
 - [Beaker] Update Beaker environment
