@@ -1,3 +1,8 @@
+## 2015-02-25 Release 1.1.1
+### Summary:
+- [Beaker] Update Beaker environment
+- [Puppet] Add support for Debian 8.x (Jessie)
+
 ## 2015-01-19 Release 1.1.0
 ### Summary:
 - [Puppet] Add parameter 'default_editor' to trigger execution of update-alternatives
