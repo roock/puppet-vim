@@ -262,7 +262,7 @@ and 'false'. Defaults to 'true'.
 
 This module has been tested on:
 
-* Debian 6/7
+* Debian 6/7/8
 * Ubuntu 12.04/14.04
 
 ## Development
