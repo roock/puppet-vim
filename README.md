@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/dhoppe/puppet-vim.png?branch=master)](https://travis-ci.org/dhoppe/puppet-vim)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/dhoppe/vim.svg)](https://forge.puppetlabs.com/dhoppe/vim)
+[![Puppet Forge](https://img.shields.io/puppetforge/dt/dhoppe/vim.svg)](https://forge.puppetlabs.com/dhoppe/vim)
+[![Puppet Forge](https://img.shields.io/puppetforge/mc/dhoppe.svg)](https://forge.puppetlabs.com/dhoppe)
+[![Puppet Forge](https://img.shields.io/puppetforge/rc/dhoppe.svg)](https://forge.puppetlabs.com/dhoppe)
 
 #### Table of Contents
 
