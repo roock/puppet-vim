@@ -17,9 +17,9 @@ describe 'vim', :type => :class do
       describe 'vim::install' do
         context 'defaults' do
           it do
-            is_expected.to contain_package('vim').with({
+            is_expected.to contain_package('vim').with(
               'ensure' => 'present',
-            })
+            )
           end
         end
 
@@ -29,9 +29,9 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_package('vim').with({
+            is_expected.to contain_package('vim').with(
               'ensure' => 'latest',
-            })
+            )
           end
         end
 
@@ -41,15 +41,15 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_package('vim').with({
+            is_expected.to contain_package('vim').with(
               'ensure' => 'absent',
-            })
+            )
           end
           it do
-            is_expected.to contain_file('vim.conf').with({
+            is_expected.to contain_file('vim.conf').with(
               'ensure'  => 'present',
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
 
@@ -59,15 +59,15 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_package('vim').with({
+            is_expected.to contain_package('vim').with(
               'ensure' => 'purged',
-            })
+            )
           end
           it do
-            is_expected.to contain_file('vim.conf').with({
+            is_expected.to contain_file('vim.conf').with(
               'ensure'  => 'absent',
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
       end
@@ -75,10 +75,10 @@ describe 'vim', :type => :class do
       describe 'vim::config' do
         context 'defaults' do
           it do
-            is_expected.to contain_file('vim.conf').with({
+            is_expected.to contain_file('vim.conf').with(
               'ensure'  => 'present',
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
 
@@ -88,14 +88,14 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_file('vim.dir').with({
+            is_expected.to contain_file('vim.dir').with(
               'ensure'  => 'directory',
               'force'   => false,
               'purge'   => false,
               'recurse' => true,
               'source'  => 'puppet:///modules/vim/wheezy/etc/vim',
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
 
@@ -106,14 +106,14 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_file('vim.dir').with({
+            is_expected.to contain_file('vim.dir').with(
               'ensure'  => 'directory',
               'force'   => true,
               'purge'   => true,
               'recurse' => true,
               'source'  => 'puppet:///modules/vim/wheezy/etc/vim',
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
 
@@ -123,11 +123,11 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_file('vim.conf').with({
+            is_expected.to contain_file('vim.conf').with(
               'ensure'  => 'present',
               'source'  => 'puppet:///modules/vim/wheezy/etc/vim/vimrc',
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
 
@@ -137,11 +137,11 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_file('vim.conf').with({
+            is_expected.to contain_file('vim.conf').with(
               'ensure'  => 'present',
               'content' => /THIS FILE IS MANAGED BY PUPPET/,
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
 
@@ -151,11 +151,11 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_file('vim.conf').with({
+            is_expected.to contain_file('vim.conf').with(
               'ensure'  => 'present',
               'content' => /THIS FILE IS MANAGED BY PUPPET/,
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
 
@@ -168,11 +168,11 @@ describe 'vim', :type => :class do
           }}
 
           it do
-            is_expected.to contain_file('vim.conf').with({
+            is_expected.to contain_file('vim.conf').with(
               'ensure'  => 'present',
               'content' => /THIS FILE IS MANAGED BY PUPPET/,
               'require' => 'Package[vim]',
-            })
+            )
           end
         end
       end
