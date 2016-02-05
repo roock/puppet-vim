@@ -175,6 +175,20 @@ describe 'vim', :type => :class do
             )
           end
         end
+
+        context 'when default editor' do
+          let(:params) {{
+            :default_editor => true,
+          }}
+
+          it do
+            is_expected.to contain_exec('update-alternatives').with(
+              'command' => 'update-alternatives --set editor /usr/bin/vim.basic',
+              'unless'  => 'test /etc/alternatives/editor -ef /usr/bin/vim.basic',
+              'require' => 'Package[vim]',
+            )
+          end
+        end
       end
     end
   end
