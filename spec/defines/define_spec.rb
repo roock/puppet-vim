@@ -16,11 +16,11 @@ describe 'vim::define', :type => :define do
         }}
 
         it do
-          is_expected.to contain_file('define_vimrc').with({
+          is_expected.to contain_file('define_vimrc').with(
             'ensure'  => 'present',
             'source'  => 'puppet:///modules/vim/wheezy/etc/vim/vimrc',
             'require' => 'Package[vim]',
-          })
+          )
         end
       end
 
@@ -31,11 +31,11 @@ describe 'vim::define', :type => :define do
         }}
 
         it do
-          is_expected.to contain_file('define_vimrc').with({
+          is_expected.to contain_file('define_vimrc').with(
             'ensure'  => 'present',
             'content' => /THIS FILE IS MANAGED BY PUPPET/,
             'require' => 'Package[vim]',
-          })
+          )
         end
       end
 
@@ -46,11 +46,11 @@ describe 'vim::define', :type => :define do
         }}
 
         it do
-          is_expected.to contain_file('define_vimrc').with({
+          is_expected.to contain_file('define_vimrc').with(
             'ensure'  => 'present',
             'content' => /THIS FILE IS MANAGED BY PUPPET/,
             'require' => 'Package[vim]',
-          })
+          )
         end
       end
 
@@ -64,11 +64,11 @@ describe 'vim::define', :type => :define do
         }}
 
         it do
-          is_expected.to contain_file('define_vimrc').with({
+          is_expected.to contain_file('define_vimrc').with(
             'ensure'  => 'present',
             'content' => /THIS FILE IS MANAGED BY PUPPET/,
             'require' => 'Package[vim]',
-          })
+          )
         end
       end
     end
